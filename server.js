@@ -11,6 +11,10 @@ import { router as authRouter } from './routes/auth.js'
 
 // create the express app
 const app = express()
+app.listen(3000, () => {
+  console.log(`Server is running on port 3000`);
+  console.log(`Connecting to PostgreSQL database at ${process.env.DATABASE_URL}`);
+});
 
 // basic middleware
 app.use(cors())
